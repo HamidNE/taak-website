@@ -7,7 +7,7 @@
 		tag="article"
 		class="shadow-sm border-0 h-100"
 	>
-		<b-card-body class="text-center d-flex flex-column">
+		<b-card-body class="text-justify d-flex flex-column">
 			<b-card-text v-text="webinar.description" />
 			<b-button
 				block
@@ -26,10 +26,6 @@ export default {
 	name: "WebinarCard",
 	props: {
 		webinar: {
-			required: true
-		},
-		href: {
-			type: String,
 			required: true
 		}
 	},

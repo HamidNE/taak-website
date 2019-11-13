@@ -30,18 +30,15 @@
 		<section class="section section--white pt-0 section--pb-3x" id="section2">
 			<div class="container flex-column">
 				<h2 class="mb-4">آخرین وبینار های برگزار شده</h2>
-				<div class="row">
-					<div
-						class="col-lg-4 col-md-6 my-2"
+				<b-row>
+					<b-col
+						lg="4" md="6" class="my-2"
 						v-for="(webinar, index) in webinars.all.slice(0, 3)"
 						:key="index"
 					>
-						<webinar-card
-							:webinar="webinar"
-							:href="'/webinars/' + webinar.slug"
-						/>
-					</div>
-				</div>
+						<webinar-card :webinar="webinar"
+					/></b-col>
+				</b-row>
 			</div>
 		</section>
 		<section
