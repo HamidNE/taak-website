@@ -18,17 +18,20 @@
 				</b-row>
 			</b-container>
 		</section>
-		<section class="section section--white pt-0 section--pb-3x">
+		<section class="section pt-0 section--pb-3x">
 			<b-container class="flex-column align-items-baseline">
 				<h2>درباره این وبینار :</h2>
-				<div class="mt-3 contents text-justify" v-html="webinar.content"></div>
+				<div
+					class="mt-3 contents w-100 text-justify"
+					v-html="webinar.content"
+				/>
 			</b-container>
 		</section>
 		<section
 			id="section3"
 			class="section section--light section-skew section--pt-3x section--pb-xx"
 		>
-			<div class="container flex-column">
+			<b-container class="container flex-column">
 				<div class="section--header-icon">
 					<div class="image">
 						<img src="~/assets/svg/icons/icon-download.svg" alt="" />
@@ -44,7 +47,7 @@
 						></a>
 					</div>
 				</div>
-			</div>
+			</b-container>
 		</section>
 	</div>
 </template>
@@ -57,16 +60,16 @@ export default {
 	name: "webinar",
 	components: { Navbar },
 	computed: mapState(["providers"]),
+	head() {
+		return {
+			title: this.webinar.title
+		};
+	},
 	methods: {
 		providerName(providerID) {
 			const provider = this.providers.all[providerID];
 			return provider.first_name + " " + provider.last_name;
 		}
-	},
-	head() {
-		return {
-			title: this.webinar.title
-		};
 	},
 	async asyncData({ store, params }) {
 		const data = store.state.webinars.all.find(
@@ -108,5 +111,9 @@ export default {
 
 .contents {
 	font-size: 1.2rem;
+}
+
+img {
+	max-width: 100%;
 }
 </style>
