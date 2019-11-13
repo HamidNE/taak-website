@@ -88,7 +88,7 @@ export default {
 	}
 
 	&:before {
-		background-image: url(/svg/backgrounds/waves-2.svg),
+		background-image: url(../assets/svg/backgrounds/waves-2.svg),
 			linear-gradient(326deg, #009688 20%, #1a1c82 92%);
 	}
 }
