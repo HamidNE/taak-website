@@ -2,7 +2,7 @@
 	<div>
 		<section
 			id="section1"
-			class="section section--dark section--gradient section--gradient-one"
+			class="section section--dark section--gradient section--gradient-two"
 		>
 			<navbar />
 			<div class="container text-white pt-5">
@@ -51,7 +51,7 @@
 
 <script>
 import { mapState } from "vuex";
-import Navbar from "../../components/layouts/Navbar";
+import Navbar from "~/components/layouts/Navbar";
 
 export default {
 	name: "webinar",
