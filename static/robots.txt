@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://taakproject.ir/sitemap.xml
