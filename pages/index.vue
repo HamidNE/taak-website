@@ -102,6 +102,7 @@
 								name="email"
 								class="form-control form-control-lg flex-fill"
 								placeholder="آدرس ایمیل"
+								required
 							/>
 						</div>
 						<button class="btn btn-lg btn-primary">ثبت</button>

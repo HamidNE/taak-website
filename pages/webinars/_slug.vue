@@ -2,27 +2,27 @@
 	<div>
 		<section
 			id="section1"
-			class="section section--dark section--gradient section--gradient-two"
+			class="section section--gradient section--gradient-two"
 		>
 			<navbar />
-			<div class="container text-white pt-5">
-				<div class="row">
-					<div class="col-md-6">
+			<b-container class="text-white pt-5">
+				<b-row>
+					<b-col md="6">
 						<h1 v-text="webinar.title"></h1>
 						<div class="provider mb-4 d-inline-block">
-							<span>ارئه دهنده : </span
-							><strong v-text="providerName(webinar.provider_id)"></strong>
+							<span>ارئه دهنده : </span>
+							<strong v-text="providerName(webinar.provider_id)" />
 						</div>
-						<p v-text="webinar.description"></p>
-					</div>
-				</div>
-			</div>
+						<p class="font-12" v-text="webinar.description" />
+					</b-col>
+				</b-row>
+			</b-container>
 		</section>
 		<section class="section section--white pt-0 section--pb-3x">
-			<div class="container flex-column align-items-baseline">
+			<b-container class="flex-column align-items-baseline">
 				<h2>درباره این وبینار :</h2>
 				<div class="mt-3 contents text-justify" v-html="webinar.content"></div>
-			</div>
+			</b-container>
 		</section>
 		<section
 			id="section3"
@@ -36,7 +36,7 @@
 					<div class="title">دانلود فایل ها</div>
 				</div>
 				<div class="d-flex justify-content-center">
-					<div class="mx-1" v-for="link in webinar.links">
+					<div class="mx-1" v-for="(link, index) in webinar.links" :key="index">
 						<a
 							:href="link.value"
 							class="btn btn-primary"
@@ -79,13 +79,8 @@ export default {
 
 <style lang="scss" scoped>
 #section1 {
-	h1 {
-		font-size: 4rem;
-	}
-
 	p {
 		color: #fffc;
-		font-size: 1.3rem;
 	}
 
 	&:before {
