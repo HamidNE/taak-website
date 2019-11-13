@@ -21,3 +21,14 @@ img {
 		}
 	}
 }
+
+.btn-secondary {
+	background-color: transparent;
+	border: 1px solid #ebedf2;
+	color: #6c7293;
+	&:hover {
+		color: #6c7293;
+		border-color: #ebedf2 !important;
+		background-color: #f4f5f8 !important;
+	}
+}
