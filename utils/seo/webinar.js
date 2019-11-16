@@ -19,7 +19,7 @@ export default webinar => {
       {property: 'og:image', content: image},
       {property: 'og:video', content: webinar.links[0].value},
       {property: 'og:site_name', content: 'Taak Project'},
-      {property: 'og:description', content: product.description},
+      {property: 'og:description', content: webinar.description},
 
       // Twitter
       {name: 'twitter:card', content: 'webinar'},
