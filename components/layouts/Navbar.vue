@@ -21,7 +21,7 @@
 					<b-nav-item to="/providers" title="ارائه کنندگان">
 						ارائه کنندگان
 					</b-nav-item>
-					<b-nav-item href="https://t.me/joinchat/BN0eVEm2h9uq0C0i84hDYw" target="blank" title="ارائه کنندگان">
+					<b-nav-item :href="website.telegramGroup" target="blank">
 						<i class="fab fa-telegram font-15"></i>
 					</b-nav-item>
 				</b-navbar-nav>
@@ -31,8 +31,14 @@
 </template>
 
 <script>
+import website from "~/data/website";
 export default {
-	name: "Navbar"
+	name: "Navbar",
+	data() {
+		return {
+			website
+		};
+	}
 };
 </script>
 
