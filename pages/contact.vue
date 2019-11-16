@@ -16,16 +16,16 @@
 					<li>تمایل به همکاری با تیم اجرایی</li>
 				</ul>
 				<p>از آنجایی که تاک هنوز در مراحل اولیه حیات خود به سر می برد از هر گونه کمک اجرایی و فکری دوستان استقبال می کند.</p>
-				<p>برای تماس با ما می توانید از ایمیل admin@taakestan.com استفاده کنید</p>
-				<p>همچنین می توانید با عضویت در گروه اینترنتی در تبادل نظرات شرکت کنید</p>
-				<p>همچنین با مراجع به صفحه ما در فیسبوک می توانید با ما در ارتباط باشید</p>
+				<p>برای ارتباط با ما در <a class="text-primary" :href="website.telegramGroup" target="blank">گروه تلگرامی تاگ</a> عضو بشوید.</p>
 			</b-container>
 		</section>
 	</div>
 </template>
 
 <script>
+import website from "~/data/website";
 import Navbar from "~/components/layouts/Navbar";
+
 export default {
 	name: "contact-us",
 	components: { Navbar },
@@ -33,7 +33,12 @@ export default {
 		return {
 			title: "تماس با ما"
 		};
-	}
+  },
+  data() {
+    return {
+      website
+    }
+  },
 };
 </script>
 
