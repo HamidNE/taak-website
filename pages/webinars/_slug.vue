@@ -54,6 +54,7 @@
 
 <script>
 import { mapState } from "vuex";
+import webinarSEO from "~/utils/seo/webinar";
 import Navbar from "~/components/layouts/Navbar";
 
 export default {
@@ -61,9 +62,7 @@ export default {
 	components: { Navbar },
 	computed: mapState(["providers"]),
 	head() {
-		return {
-			title: this.webinar.title
-		};
+		return webinarSEO(this.webinar);
 	},
 	methods: {
 		providerName(providerID) {
