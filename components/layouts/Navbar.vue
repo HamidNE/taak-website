@@ -9,17 +9,20 @@
 
 			<b-collapse id="nav-collapse" is-nav>
 				<b-navbar-nav class="mr-auto text-white">
-					<b-nav-item>
-						<nuxt-link class="nav-link" to="/webinars" title="وبینار های قبلی">وبینار های قبلی</nuxt-link>
+					<b-nav-item to="/webinars" title="وبینار های قبلی">
+						وبینار های قبلی
 					</b-nav-item>
-					<b-nav-item>
-						<nuxt-link class="nav-link" to="/contact" title="تماس با ما">تماس با ما</nuxt-link>
+					<b-nav-item to="/contact" title="تماس با ما">
+						تماس با ما
 					</b-nav-item>
-					<b-nav-item>
-						<nuxt-link class="nav-link" to="/about" title="درباره پروژه تاک">درباره پروژه تاک</nuxt-link>
+					<b-nav-item to="/about" title="درباره پروژه تاک">
+						درباره پروژه تاک
 					</b-nav-item>
-					<b-nav-item>
-						<nuxt-link class="nav-link" to="/providers" title="ارائه کنندگان">ارائه کنندگان</nuxt-link>
+					<b-nav-item to="/providers" title="ارائه کنندگان">
+						ارائه کنندگان
+					</b-nav-item>
+					<b-nav-item :href="website.telegramGroup" target="blank">
+						<i class="fab fa-telegram font-15"></i>
 					</b-nav-item>
 				</b-navbar-nav>
 			</b-collapse>
@@ -28,8 +31,14 @@
 </template>
 
 <script>
+import website from "~/data/website";
 export default {
-	name: "Navbar"
+	name: "Navbar",
+	data() {
+		return {
+			website
+		};
+	}
 };
 </script>
 

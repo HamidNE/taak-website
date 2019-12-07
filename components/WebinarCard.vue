@@ -1,14 +1,25 @@
 <template>
-	<card
+	<b-card
+		no-body
 		:title="webinar.title"
-		:provider="providerName(webinar.provider_id)"
-		:image-path="imagePath"
-		:href="href"
-	>{{ webinar.description }}</card>
+		:img-src="imagePath"
+		img-alt="Image"
+		tag="article"
+		class="shadow-sm border-0 h-100"
+	>
+		<b-card-body class="text-justify d-flex flex-column">
+			<b-card-text v-text="webinar.description" />
+			<b-button
+				block
+				class="mt-auto"
+				:to="{ name: 'webinars-slug', params: { slug: webinar.slug } }"
+				>مشاهده</b-button
+			>
+		</b-card-body>
+	</b-card>
 </template>
 
 <script>
-import Card from "./Card";
 import { mapState } from "vuex";
 
 export default {
@@ -16,23 +27,12 @@ export default {
 	props: {
 		webinar: {
 			required: true
-		},
-		href: {
-			type: String,
-			required: true
 		}
 	},
-	components: { Card },
 	computed: {
 		...mapState(["providers"]),
 		imagePath() {
 			return `/img/webinars/${this.webinar.slug}.jpg`;
-		}
-	},
-	methods: {
-		providerName(providerID) {
-			const provider = this.providers.all[providerID];
-			return provider.first_name + " " + provider.last_name;
 		}
 	}
 };

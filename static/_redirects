@@ -3,9 +3,9 @@
 # Redirect default Netlify subdomain to primary domain
 https://taak.netlify.com/* https://taakproject.ir/:splat 301!
 
-# Redirect Domains taak.cf
-https://taak.cf/* https://taakproject.ir/:splat 301!
-https://www.taak.cf/* https://taakproject.ir/:splat 301!
+# Redirect Domains taakestan.com
+https://taakestan.com/* https://taakproject.ir/:splat 301!
+https://www.taakestan.com/* https://taakproject.ir/:splat 301!
 
 # Redirect Domains taakproject.ir
 https://www.taakproject.ir/* https://taakproject.ir/:splat 301!
